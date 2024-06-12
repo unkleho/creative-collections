@@ -16,7 +16,20 @@ import {
 } from 'spectacle';
 
 const Presentation = () => (
-  <Deck template={() => <DefaultTemplate />}>
+  <Deck
+    template={() => <DefaultTemplate />}
+    theme={{
+      colors: {
+        // primary: 'red',
+        // secondary: 'blue',
+        tertiary: 'black',
+      },
+      space: [32],
+      // fontSizes: {
+      //   text: '32px',
+      // },
+    }}
+  >
     <Slide>
       <FlexBox height="100%" flexDirection="column">
         <Heading>Creative Collections</Heading>
@@ -42,15 +55,15 @@ const Presentation = () => (
 - Rebuilt in 2017
 - Collection data from **EMu** is harvested in realtime into a database that is exposed via an API
 - React, GraphQL, Thumbor, MongoDB, ElasticSearch
-- https://collection.powerhouse.com.au
-- https://medium.com/maas-labs/new-maas-online-collection-the-techie-stuff-d514cd3695c9
+- <a href="https://collection.powerhouse.com.au" target="phm">collection.powerhouse.com.au</a>
 `}</MarkdownSlide>
 
+    {/* - https://medium.com/maas-labs/new-maas-online-collection-the-techie-stuff-d514cd3695c9 */}
     {/* MAAS Labs SketchUp */}
 
-    <MarkdownSlide animateListItems>{`
+    {/* <MarkdownSlide animateListItems>{`
 ![Diagram](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*syaVANVUhahk08qZxnxvoQ.gif)
-`}</MarkdownSlide>
+`}</MarkdownSlide> */}
 
     <MarkdownSlide animateListItems>{`
 # DX Lab Website
@@ -115,14 +128,12 @@ const Presentation = () => (
     {/* Search Captain cook sword */}
 
     <MarkdownSlide animateListItems>{`
-## State Library of NSW Collection
-### AI image tags
+## SLNSW – AI image tags
 - https://collection.sl.nsw.gov.au/digital/0m3WozR2J0PvB
 `}</MarkdownSlide>
 
     <MarkdownSlide animateListItems>{`
-## State Library of NSW Collection
-### Hierarchy viewer
+## SLNSW – Hierarchy viewer
 - Blog post - https://dxlab.sl.nsw.gov.au/blog/new-collection-hierarchies
 - May Gibbs - https://collection.sl.nsw.gov.au/record/n7oVw8Zn
 - APA - https://collection.sl.nsw.gov.au/record/9ALk75kY
